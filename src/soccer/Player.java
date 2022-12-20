@@ -4,41 +4,39 @@ import java.util.Random;
 
 public class Player {
 
-    private String name;
-    private int age;
-    private int force;
-    private int powerAtGoalKick;
-    private int motivation;
-    private int numberOfGoals;
+    protected String name;
+    protected int age;
+    protected int force;
+    protected int powerAtGoalKick;
+    protected int motivation;
+    protected int numberOfGoals;
 
-    public Player(String name,int age, int force, int powerAtGoalKick, int motivation, int numberOfGoals) {
-        this.name=name;
-        this.age=age;
-        this.force=force;
-        this.powerAtGoalKick=powerAtGoalKick;
-        this.motivation=motivation;
-        this.numberOfGoals=numberOfGoals;
+    public Player(String name, int age, int force, int powerAtGoalKick, int motivation, int numberOfGoals) {
+        this.name = name;
+        this.age = age;
+        this.force = force;
+        this.powerAtGoalKick = powerAtGoalKick;
+        this.motivation = motivation;
+        this.numberOfGoals = numberOfGoals;
     }
 
     public int shootAtGoal() {
-        int result=0;
-        int diff=0;
-        Random rand=new Random();
-        diff=rand.nextInt(4) - 2;  // -2, -1, 0, 1
-        result=powerAtGoalKick+diff;
+        int result = 0;
+        int diff = 0;
+        Random rand = new Random();
+        diff = rand.nextInt(4) - 2;  // -2, -1, 0, 1
+        result = powerAtGoalKick + diff;
         return validate(result);
     }
 
-    private int validate(int number) {
-        if (number<1) {
+    protected int validate(int number) {
+        if (number < 1) {
             return 1;
         }
-        if (number>10) {
+        if (number > 10) {
             return 10;
         }
         return number;
-
-
     }
 
     @Override

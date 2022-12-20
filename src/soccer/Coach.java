@@ -6,9 +6,9 @@ public class Coach {
     private int experience;
 
     public Coach(String name, int age, int experience) {
-        this.name=name;
-        this.age=age;
-        this.experience=experience;
+        this.name = name;
+        this.age = age;
+        this.experience = experience;
     }
 
     @Override
@@ -18,7 +18,4 @@ public class Coach {
                 "\nage: " + this.age +
                 "\nexperience: " + this.experience;
     }
-
-
-
 }
