@@ -17,6 +17,7 @@ public class SoccerManagerUI {
 
         Goalkeeper g = new Goalkeeper("Kahn", 37, 6, 8, 10, 8);
         System.out.println(g);
+        
     }
 
 

@@ -2,18 +2,16 @@ package soccer;
 
 import java.util.Random;
 
-public class Player {
+public class Player extends Person {
 
-    protected String name;
-    protected int age;
+
     protected int force;
     protected int powerAtGoalKick;
     protected int motivation;
     protected int numberOfGoals;
 
     public Player(String name, int age, int force, int powerAtGoalKick, int motivation, int numberOfGoals) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.force = force;
         this.powerAtGoalKick = powerAtGoalKick;
         this.motivation = motivation;
@@ -41,13 +39,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "\nPlayer\n" +
-                "name: " + this.name +
-                "\nage: " + this.age +
-                "\nforce: " + this.force +
-                "\nmotivation: " + this.motivation +
-                "\npowerAtGoalKick: " + this.powerAtGoalKick +
-                "\nnumberOfGoals: " + this.numberOfGoals;
+        return "\nPlayer\n" + "name: " + this.name + "\nage: " + this.age + "\nforce: " + this.force + "\nmotivation: " + this.motivation + "\npowerAtGoalKick: " + this.powerAtGoalKick + "\nnumberOfGoals: " + this.numberOfGoals;
     }
 
     public void addGoal() {
