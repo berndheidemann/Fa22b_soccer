@@ -37,6 +37,10 @@ public class Player extends Person {
         return number;
     }
 
+    public int getMotivation() {
+        return this.motivation;
+    }
+
     @Override
     public String toString() {
         return "\nPlayer\n" + "name: " + this.name + "\nage: " + this.age + "\nforce: " + this.force + "\nmotivation: " + this.motivation + "\npowerAtGoalKick: " + this.powerAtGoalKick + "\nnumberOfGoals: " + this.numberOfGoals;
@@ -44,5 +48,13 @@ public class Player extends Person {
 
     public void addGoal() {
         this.numberOfGoals++;
+    }
+
+    public int getForce() {
+        return this.force;
+    }
+
+    public int getNumberOfGoals() {
+        return numberOfGoals;
     }
 }

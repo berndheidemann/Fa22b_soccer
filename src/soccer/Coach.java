@@ -16,4 +16,8 @@ public class Coach extends Person {
                 "\nage: " + this.age +
                 "\nexperience: " + this.experience;
     }
+
+    public int getExperience() {
+        return this.experience;
+    }
 }
